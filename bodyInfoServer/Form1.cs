@@ -9,6 +9,12 @@ using System.Windows.Forms;
 using comWithPlc;
 using oracleDatabase;
 
+
+/*
+ timer1定时1s钟，显示时间信息
+ timer2定时20s，从PLC获取值
+     
+     */
 namespace bodyInfoServer
 {
     public partial class Form1 : Form
@@ -95,16 +101,38 @@ namespace bodyInfoServer
         private void timer2_Tick(object sender, EventArgs e)
         {
             timer2.Interval = 20000;
+
+            #region 颜色编组站一区来车信息
             bodySkid.Text = operatePLC.getCharValue("10.228.141.94", 960, 340, 4);
             bodyType.Text = operatePLC.getCharValue("10.228.141.94", 960, 118, 3);
             bodyColor.Text = operatePLC.getCharValue("10.228.141.94", 960, 132, 4);
             bodyFis.Text = operatePLC.getCharValue("10.228.141.94", 960, 8, 8);
-        }
+            #endregion
 
+
+            #region 修饰一线反修车信息
+            xiushionebody.Text = operatePLC.getCharValue("10.228.141.98", 956, 18, 3);
+            xiushionecolor.Text = operatePLC.getCharValue("10.228.141.98", 956, 32, 4);
+            xiushioneskid.Text = operatePLC.getCharValue("10.228.141.98", 956, 230, 4);
+            xiushionefis.Text = operatePLC.getCharValue("10.228.141.98", 956, 10, 8);
+            #endregion
+
+            #region 面漆一线来车信息
+            tconebody.Text = operatePLC.getCharValue("10.228.141.158", 951, 18, 3);
+            tconecolor.Text = operatePLC.getCharValue("10.228.141.158", 951, 32, 4);
+            tconeskid.Text = operatePLC.getCharValue("10.228.141.158", 951, 230, 4);
+            tconefis.Text = operatePLC.getCharValue("10.228.141.158", 951, 10, 8);
+            #endregion
+
+
+        }
+        //颜色编组站来车记录
         private void timer3_Tick(object sender, EventArgs e)
         {
             timer3.Interval = 10000;
-  
+
+            #region 颜色编组站一区来车信息记录到数据库
+
             if (bodySkid.Text == "....")
             {
 
@@ -115,11 +143,69 @@ namespace bodyInfoServer
                 operateDatabase.OrcGetCom(sqlstr);
                 timer3.Stop();
             }
+
+            #endregion
+
+          
         }
 
+        //修饰来车记录
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            timer4.Interval = 10000;
+            #region 修饰一线返修区域来车信息记录到数据库
+
+            if (xiushioneskid.Text == "....")
+            {
+
+            }
+            else
+            {
+                string sqlstr = "insert into XIUSHIONEREPAIRBODYINFO values('','','','" + xiushionebody.Text + "','" +xiushioneskid.Text + "','" + xiushionecolor.Text + "','" + xiushionefis.Text + "') ";
+                operateDatabase.OrcGetCom(sqlstr);
+                timer4.Stop();
+            }
+
+            #endregion
+
+        }
+        //颜色编组站来车
         private void bodySkid_TextChanged(object sender, EventArgs e)
         {
             timer3.Start();
+        }
+
+        //修饰来车
+        private void xiushioneskid_TextChanged(object sender, EventArgs e)
+        {
+            timer4.Start();
+        }
+
+
+        //面漆一线来车
+
+        private void tconeskid_TextChanged(object sender, EventArgs e)
+        {
+            timer5.Start();
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            timer5.Interval = 10000;
+            #region 修饰一线返修区域来车信息记录到数据库
+
+            if (tconeskid.Text == "....")
+            {
+
+            }
+            else
+            {
+                string sqlstr = "insert into TCONEBODYINFO values('','','','" + tconefis.Text + "','" + tconecolor.Text + "','" + tconeskid.Text + "','" + tconebody.Text + "') ";
+                operateDatabase.OrcGetCom(sqlstr);
+                timer5.Stop();
+            }
+
+            #endregion
         }
     }
 }
