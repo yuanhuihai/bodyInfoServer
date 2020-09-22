@@ -169,6 +169,26 @@ namespace bodyInfoServer
             #endregion
 
         }
+
+        //面漆一线来车记录
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            timer5.Interval = 10000;
+            #region 修饰一线返修区域来车信息记录到数据库
+
+            if (tconeskid.Text == "....")
+            {
+
+            }
+            else
+            {
+                string sqlstr = "insert into TCONEBODYINFO values('','','','" + tconefis.Text + "','" + tconecolor.Text + "','" + tconeskid.Text + "','" + tconebody.Text + "') ";
+                operateDatabase.OrcGetCom(sqlstr);
+                timer5.Stop();
+            }
+
+            #endregion
+        }
         //颜色编组站来车
         private void bodySkid_TextChanged(object sender, EventArgs e)
         {
@@ -189,23 +209,6 @@ namespace bodyInfoServer
             timer5.Start();
         }
 
-        private void timer5_Tick(object sender, EventArgs e)
-        {
-            timer5.Interval = 10000;
-            #region 修饰一线返修区域来车信息记录到数据库
-
-            if (tconeskid.Text == "....")
-            {
-
-            }
-            else
-            {
-                string sqlstr = "insert into TCONEBODYINFO values('','','','" + tconefis.Text + "','" + tconecolor.Text + "','" + tconeskid.Text + "','" + tconebody.Text + "') ";
-                operateDatabase.OrcGetCom(sqlstr);
-                timer5.Stop();
-            }
-
-            #endregion
-        }
+    
     }
 }
