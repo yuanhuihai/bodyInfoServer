@@ -213,7 +213,7 @@ namespace bodyInfoServer
             }
             else
             {
-                string sqlstr = "insert into TCONEREADYBODYINFO values('','','','" + tconeofffis.Text + "','" + tconeoffskid.Text + "','" + tconeoffbody.Text + "','" + tconeoffcolor.Text + "') ";
+                string sqlstr = "insert into XIUSHIONEREPAIRBODYINFO values('','','','" + tconeoffbody.Text + "','" + tconeoffskid.Text + "','" + tconeoffcolor.Text + "','" + tconeofffis.Text + "') ";
                 operateDatabase.OrcGetCom(sqlstr);
                 timer5.Stop();
             }
