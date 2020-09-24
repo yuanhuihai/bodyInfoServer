@@ -10,6 +10,7 @@ using comWithPlc;
 using oracleDatabase;
 
 
+
 /*
  timer1定时1s钟，显示时间信息
  timer2定时20s，从PLC获取值
@@ -215,7 +216,7 @@ namespace bodyInfoServer
             {
                 string sqlstr = "insert into XIUSHIONEREPAIRBODYINFO values('','','','" + tconeoffbody.Text + "','" + tconeoffskid.Text + "','" + tconeoffcolor.Text + "','" + tconeofffis.Text + "') ";
                 operateDatabase.OrcGetCom(sqlstr);
-                timer5.Stop();
+                timer6.Stop();
             }
         }
 
@@ -246,5 +247,6 @@ namespace bodyInfoServer
         {
             timer6.Start();
         }
+
     }
 }
