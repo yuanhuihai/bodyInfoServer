@@ -69,11 +69,22 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tconeoffbody = new System.Windows.Forms.TextBox();
+            this.tconeoffcolor = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tconeofffis = new System.Windows.Forms.TextBox();
+            this.tconeoffskid = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.timer6 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -120,7 +131,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1322, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -320,9 +331,9 @@
             this.groupBox3.Controls.Add(this.tconeskid);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(12, 215);
+            this.groupBox3.Location = new System.Drawing.Point(548, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(486, 79);
+            this.groupBox3.Size = new System.Drawing.Size(486, 72);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "面漆一线来车信息";
@@ -396,11 +407,98 @@
             // 
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tconeoffbody);
+            this.groupBox4.Controls.Add(this.tconeoffcolor);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.tconeofffis);
+            this.groupBox4.Controls.Add(this.tconeoffskid);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Location = new System.Drawing.Point(548, 110);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(486, 79);
+            this.groupBox4.TabIndex = 49;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "面漆一线下线车来车信息";
+            // 
+            // tconeoffbody
+            // 
+            this.tconeoffbody.Location = new System.Drawing.Point(69, 33);
+            this.tconeoffbody.Name = "tconeoffbody";
+            this.tconeoffbody.Size = new System.Drawing.Size(56, 20);
+            this.tconeoffbody.TabIndex = 45;
+            // 
+            // tconeoffcolor
+            // 
+            this.tconeoffcolor.Location = new System.Drawing.Point(283, 33);
+            this.tconeoffcolor.Name = "tconeoffcolor";
+            this.tconeoffcolor.Size = new System.Drawing.Size(56, 20);
+            this.tconeoffcolor.TabIndex = 47;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(32, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 13);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "车型";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(342, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "FIS编码";
+            // 
+            // tconeofffis
+            // 
+            this.tconeofffis.Location = new System.Drawing.Point(395, 33);
+            this.tconeofffis.Name = "tconeofffis";
+            this.tconeofffis.Size = new System.Drawing.Size(56, 20);
+            this.tconeofffis.TabIndex = 48;
+            // 
+            // tconeoffskid
+            // 
+            this.tconeoffskid.Location = new System.Drawing.Point(183, 33);
+            this.tconeoffskid.Name = "tconeoffskid";
+            this.tconeoffskid.Size = new System.Drawing.Size(56, 20);
+            this.tconeoffskid.TabIndex = 46;
+            this.tconeoffskid.TextChanged += new System.EventHandler(this.tconeoffskid_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(134, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 13);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "滑橇号";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(246, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 13);
+            this.label16.TabIndex = 43;
+            this.label16.Text = "颜色";
+            // 
+            // timer6
+            // 
+            this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1322, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -419,6 +517,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,6 +565,16 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tconeoffbody;
+        private System.Windows.Forms.TextBox tconeoffcolor;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tconeofffis;
+        private System.Windows.Forms.TextBox tconeoffskid;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Timer timer6;
     }
 }
 

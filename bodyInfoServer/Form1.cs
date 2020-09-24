@@ -92,11 +92,14 @@ namespace bodyInfoServer
 
         #endregion
 
+
+        #region 底部显示时间信息
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Interval = 1000;
             toolStripStatusLabel1.Text = DateTime.Now.ToString();
         }
+        #endregion
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -113,15 +116,23 @@ namespace bodyInfoServer
             #region 修饰一线反修车信息
             xiushionebody.Text = operatePLC.getCharValue("10.228.141.98", 956, 18, 3);
             xiushionecolor.Text = operatePLC.getCharValue("10.228.141.98", 956, 32, 4);
-            xiushioneskid.Text = operatePLC.getCharValue("10.228.141.98", 956, 230, 4);
+            xiushioneskid.Text = operatePLC.getCharValue("10.228.141.98", 956, 240, 4);
             xiushionefis.Text = operatePLC.getCharValue("10.228.141.98", 956, 10, 8);
             #endregion
 
             #region 面漆一线来车信息
             tconebody.Text = operatePLC.getCharValue("10.228.141.158", 951, 18, 3);
             tconecolor.Text = operatePLC.getCharValue("10.228.141.158", 951, 32, 4);
-            tconeskid.Text = operatePLC.getCharValue("10.228.141.158", 951, 230, 4);
+            tconeskid.Text = operatePLC.getCharValue("10.228.141.158", 951, 240, 4);
             tconefis.Text = operatePLC.getCharValue("10.228.141.158", 951, 10, 8);
+            #endregion
+
+
+            #region 面漆一线下线车来车信息
+            tconeoffbody.Text = operatePLC.getCharValue("10.228.141.98", 951, 18, 3);
+            tconeoffcolor.Text = operatePLC.getCharValue("10.228.141.98", 951, 32, 4);
+            tconeoffskid.Text = operatePLC.getCharValue("10.228.141.98", 951, 240, 4);
+            tconeofffis.Text = operatePLC.getCharValue("10.228.141.98", 951, 10, 8);
             #endregion
 
 
@@ -189,6 +200,26 @@ namespace bodyInfoServer
 
             #endregion
         }
+
+        //面漆一线下线车来车记录
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            timer6.Interval = 10000;
+
+
+            if (tconeoffskid.Text == "....")
+            {
+
+            }
+            else
+            {
+                string sqlstr = "insert into TCONEREADYBODYINFO values('','','','" + tconeofffis.Text + "','" + tconeoffskid.Text + "','" + tconeoffbody.Text + "','" + tconeoffcolor.Text + "') ";
+                operateDatabase.OrcGetCom(sqlstr);
+                timer5.Stop();
+            }
+        }
+
+
         //颜色编组站来车
         private void bodySkid_TextChanged(object sender, EventArgs e)
         {
@@ -209,6 +240,11 @@ namespace bodyInfoServer
             timer5.Start();
         }
 
-    
+
+        //面漆一线下线车来车
+        private void tconeoffskid_TextChanged(object sender, EventArgs e)
+        {
+            timer6.Start();
+        }
     }
 }
