@@ -33,6 +33,8 @@ namespace bodyInfoServer
         {
             timer1.Start();
             timer2.Start();
+
+            operateDatabase.connOpen();
         }
 
         #region 程序后台运行
