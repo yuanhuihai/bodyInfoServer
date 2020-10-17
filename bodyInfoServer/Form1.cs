@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using comWithPlc;
 using oracleDatabase;
+using System.Threading;
+using Oracle.ManagedDataAccess.Client;
+
 
 
 
@@ -35,6 +38,9 @@ namespace bodyInfoServer
             timer2.Start();
 
             operateDatabase.connOpen();
+
+            Thread updatezhiliu = new Thread(new ThreadStart(zhiliuche));
+            updatezhiliu.Start();
         }
 
         #region 程序后台运行
@@ -249,6 +255,79 @@ namespace bodyInfoServer
         {
             timer6.Start();
         }
+
+
+
+
+
+        //计算滞留车
+        public void zhiliuche()
+        {
+            while (true)
+            {
+                //获取滞留车数量
+                string sql = "select distinct FIS from XIUSHIONEREPAIRBODYINFO";
+                int repairCarNum = operateDatabase.OrcGetNums(sql);
+
+                //定义反修车信息
+
+                string[] repairFisInfo = new string[repairCarNum];
+
+
+
+                //获取滞留车明细
+                int j = 0;
+
+
+                OracleDataReader read = operateDatabase.OrcGetRead(sql);
+
+                while (read.Read())
+                {
+
+                    repairFisInfo[j] = read["FIS"].ToString();
+
+                    j++;
+                }
+
+
+
+
+
+
+                //判断车身信息是否去了大线，如果去了大线，则记录在返修的表格中的信息删除
+                for (int k = 0; k < repairFisInfo.Length; k++)
+                {
+
+
+                    string sqlsearch = "select * from TCONEBODYINFO where FIS='" + repairFisInfo[k] + "'";
+
+
+                    OracleDataReader readd = operateDatabase.OrcGetRead(sqlsearch);
+                    while (readd.Read())
+                    {
+                        string sqldel = "delete from XIUSHIONEREPAIRBODYINFO where FIS= '" + repairFisInfo[k] + "'";
+
+                        operateDatabase.OrcGetCom(sqldel);
+                    }
+
+
+
+                }
+
+                Thread.Sleep(60000);
+            }
+
+         
+
+
+        }
+
+
+
+
+
+
+
 
     }
 }
