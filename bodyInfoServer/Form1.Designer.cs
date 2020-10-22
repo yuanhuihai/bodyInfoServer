@@ -49,16 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.xiushionebody = new System.Windows.Forms.TextBox();
-            this.xiushionecolor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.xiushionefis = new System.Windows.Forms.TextBox();
-            this.xiushioneskid = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tconebody = new System.Windows.Forms.TextBox();
             this.tconecolor = new System.Windows.Forms.TextBox();
@@ -69,22 +59,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tconeoffbody = new System.Windows.Forms.TextBox();
-            this.tconeoffcolor = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tconeofffis = new System.Windows.Forms.TextBox();
-            this.tconeoffskid = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.timer6 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -235,92 +213,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "颜色编组站一区来车信息";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.xiushionebody);
-            this.groupBox2.Controls.Add(this.xiushionecolor);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.xiushionefis);
-            this.groupBox2.Controls.Add(this.xiushioneskid);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(12, 110);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(486, 79);
-            this.groupBox2.TabIndex = 42;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "修饰一线反修车来车信息";
-            // 
-            // xiushionebody
-            // 
-            this.xiushionebody.Location = new System.Drawing.Point(69, 33);
-            this.xiushionebody.Name = "xiushionebody";
-            this.xiushionebody.Size = new System.Drawing.Size(56, 20);
-            this.xiushionebody.TabIndex = 45;
-            // 
-            // xiushionecolor
-            // 
-            this.xiushionecolor.Location = new System.Drawing.Point(283, 33);
-            this.xiushionecolor.Name = "xiushionecolor";
-            this.xiushionecolor.Size = new System.Drawing.Size(56, 20);
-            this.xiushionecolor.TabIndex = 47;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "车型";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(342, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "FIS编码";
-            // 
-            // xiushionefis
-            // 
-            this.xiushionefis.Location = new System.Drawing.Point(395, 33);
-            this.xiushionefis.Name = "xiushionefis";
-            this.xiushionefis.Size = new System.Drawing.Size(56, 20);
-            this.xiushionefis.TabIndex = 48;
-            // 
-            // xiushioneskid
-            // 
-            this.xiushioneskid.Location = new System.Drawing.Point(183, 33);
-            this.xiushioneskid.Name = "xiushioneskid";
-            this.xiushioneskid.Size = new System.Drawing.Size(56, 20);
-            this.xiushioneskid.TabIndex = 46;
-            this.xiushioneskid.TextChanged += new System.EventHandler(this.xiushioneskid_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(134, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "滑橇号";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(246, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "颜色";
-            // 
-            // timer4
-            // 
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tconebody);
@@ -407,100 +299,12 @@
             // 
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.tconeoffbody);
-            this.groupBox4.Controls.Add(this.tconeoffcolor);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.tconeofffis);
-            this.groupBox4.Controls.Add(this.tconeoffskid);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Location = new System.Drawing.Point(548, 110);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(486, 79);
-            this.groupBox4.TabIndex = 49;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "面漆一线下线车来车信息";
-            // 
-            // tconeoffbody
-            // 
-            this.tconeoffbody.Location = new System.Drawing.Point(69, 33);
-            this.tconeoffbody.Name = "tconeoffbody";
-            this.tconeoffbody.Size = new System.Drawing.Size(56, 20);
-            this.tconeoffbody.TabIndex = 45;
-            // 
-            // tconeoffcolor
-            // 
-            this.tconeoffcolor.Location = new System.Drawing.Point(283, 33);
-            this.tconeoffcolor.Name = "tconeoffcolor";
-            this.tconeoffcolor.Size = new System.Drawing.Size(56, 20);
-            this.tconeoffcolor.TabIndex = 47;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(32, 36);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "车型";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(342, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 44;
-            this.label14.Text = "FIS编码";
-            // 
-            // tconeofffis
-            // 
-            this.tconeofffis.Location = new System.Drawing.Point(395, 33);
-            this.tconeofffis.Name = "tconeofffis";
-            this.tconeofffis.Size = new System.Drawing.Size(56, 20);
-            this.tconeofffis.TabIndex = 48;
-            // 
-            // tconeoffskid
-            // 
-            this.tconeoffskid.Location = new System.Drawing.Point(183, 33);
-            this.tconeoffskid.Name = "tconeoffskid";
-            this.tconeoffskid.Size = new System.Drawing.Size(56, 20);
-            this.tconeoffskid.TabIndex = 46;
-            this.tconeoffskid.TextChanged += new System.EventHandler(this.tconeoffskid_TextChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(134, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 13);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "滑橇号";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(246, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
-            this.label16.TabIndex = 43;
-            this.label16.Text = "颜色";
-            // 
-            // timer6
-            // 
-            this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 450);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -513,12 +317,8 @@
             this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,16 +345,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox xiushionebody;
-        private System.Windows.Forms.TextBox xiushionecolor;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox xiushionefis;
-        private System.Windows.Forms.TextBox xiushioneskid;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tconebody;
         private System.Windows.Forms.TextBox tconecolor;
@@ -565,16 +355,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Timer timer5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox tconeoffbody;
-        private System.Windows.Forms.TextBox tconeoffcolor;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tconeofffis;
-        private System.Windows.Forms.TextBox tconeoffskid;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Timer timer6;
     }
 }
 

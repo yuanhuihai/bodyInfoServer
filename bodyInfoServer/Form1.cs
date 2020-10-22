@@ -39,8 +39,7 @@ namespace bodyInfoServer
 
             operateDatabase.connOpen();
 
-            Thread updatezhiliu = new Thread(new ThreadStart(zhiliuche));
-            updatezhiliu.Start();
+ 
         }
 
         #region 程序后台运行
@@ -122,12 +121,6 @@ namespace bodyInfoServer
             #endregion
 
 
-            #region 修饰一线反修车信息
-            xiushionebody.Text = operatePLC.getCharValue("10.228.141.98", 956, 18, 3);
-            xiushionecolor.Text = operatePLC.getCharValue("10.228.141.98", 956, 32, 4);
-            xiushioneskid.Text = operatePLC.getCharValue("10.228.141.98", 956, 240, 4);
-            xiushionefis.Text = operatePLC.getCharValue("10.228.141.98", 956, 10, 8);
-            #endregion
 
             #region 面漆一线来车信息
             tconebody.Text = operatePLC.getCharValue("10.228.141.158", 951, 18, 3);
@@ -136,13 +129,6 @@ namespace bodyInfoServer
             tconefis.Text = operatePLC.getCharValue("10.228.141.158", 951, 10, 8);
             #endregion
 
-
-            #region 面漆一线下线车来车信息
-            tconeoffbody.Text = operatePLC.getCharValue("10.228.141.98", 951, 18, 3);
-            tconeoffcolor.Text = operatePLC.getCharValue("10.228.141.98", 951, 32, 4);
-            tconeoffskid.Text = operatePLC.getCharValue("10.228.141.98", 951, 240, 4);
-            tconeofffis.Text = operatePLC.getCharValue("10.228.141.98", 951, 10, 8);
-            #endregion
 
 
         }
@@ -169,26 +155,7 @@ namespace bodyInfoServer
           
         }
 
-        //修饰来车记录
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            timer4.Interval = 10000;
-            #region 修饰一线返修区域来车信息记录到数据库
-
-            if (xiushioneskid.Text == "....")
-            {
-
-            }
-            else
-            {
-                string sqlstr = "insert into XIUSHIONEREPAIRBODYINFO values('','','','" + xiushionebody.Text + "','" +xiushioneskid.Text + "','" + xiushionecolor.Text + "','" + xiushionefis.Text + "') ";
-                operateDatabase.OrcGetCom(sqlstr);
-                timer4.Stop();
-            }
-
-            #endregion
-
-        }
+ 
 
         //面漆一线来车记录
         private void timer5_Tick(object sender, EventArgs e)
@@ -210,23 +177,7 @@ namespace bodyInfoServer
             #endregion
         }
 
-        //面漆一线下线车来车记录
-        private void timer6_Tick(object sender, EventArgs e)
-        {
-            timer6.Interval = 10000;
 
-
-            if (tconeoffskid.Text == "....")
-            {
-
-            }
-            else
-            {
-                string sqlstr = "insert into XIUSHIONEREPAIRBODYINFO values('','','','" + tconeoffbody.Text + "','" + tconeoffskid.Text + "','" + tconeoffcolor.Text + "','" + tconeofffis.Text + "') ";
-                operateDatabase.OrcGetCom(sqlstr);
-                timer6.Stop();
-            }
-        }
 
 
         //颜色编组站来车
@@ -235,11 +186,7 @@ namespace bodyInfoServer
             timer3.Start();
         }
 
-        //修饰来车
-        private void xiushioneskid_TextChanged(object sender, EventArgs e)
-        {
-            timer4.Start();
-        }
+
 
 
         //面漆一线来车
@@ -250,77 +197,6 @@ namespace bodyInfoServer
         }
 
 
-        //面漆一线下线车来车
-        private void tconeoffskid_TextChanged(object sender, EventArgs e)
-        {
-            timer6.Start();
-        }
-
-
-
-
-
-        //计算滞留车
-        public void zhiliuche()
-        {
-            while (true)
-            {
-                //获取滞留车数量
-                string sql = "select distinct FIS from XIUSHIONEREPAIRBODYINFO";
-                int repairCarNum = operateDatabase.OrcGetNums(sql);
-
-                //定义反修车信息
-
-                string[] repairFisInfo = new string[repairCarNum];
-
-
-
-                //获取滞留车明细
-                int j = 0;
-
-
-                OracleDataReader read = operateDatabase.OrcGetRead(sql);
-
-                while (read.Read())
-                {
-
-                    repairFisInfo[j] = read["FIS"].ToString();
-
-                    j++;
-                }
-
-
-
-
-
-
-                //判断车身信息是否去了大线，如果去了大线，则记录在返修的表格中的信息删除
-                for (int k = 0; k < repairFisInfo.Length; k++)
-                {
-
-
-                    string sqlsearch = "select * from TCONEBODYINFO where FIS='" + repairFisInfo[k] + "'";
-
-
-                    OracleDataReader readd = operateDatabase.OrcGetRead(sqlsearch);
-                    while (readd.Read())
-                    {
-                        string sqldel = "delete from XIUSHIONEREPAIRBODYINFO where FIS= '" + repairFisInfo[k] + "'";
-
-                        operateDatabase.OrcGetCom(sqldel);
-                    }
-
-
-
-                }
-
-                Thread.Sleep(60000);
-            }
-
-         
-
-
-        }
 
 
 
