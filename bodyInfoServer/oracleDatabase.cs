@@ -33,10 +33,8 @@ namespace oracleDatabase
         public void OrcGetCom(string M_str_sqlstr)
         {
 
-
             OracleCommand orccom = new OracleCommand(M_str_sqlstr, conn);
             orccom.ExecuteNonQuery();
-
 
         }
 

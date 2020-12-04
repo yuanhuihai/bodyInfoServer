@@ -107,7 +107,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 393);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1322, 22);
             this.statusStrip1.TabIndex = 1;
@@ -116,7 +116,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // notifyIcon1
@@ -129,66 +129,66 @@
             // 
             // bodyFis
             // 
-            this.bodyFis.Location = new System.Drawing.Point(395, 32);
+            this.bodyFis.Location = new System.Drawing.Point(395, 30);
             this.bodyFis.Name = "bodyFis";
-            this.bodyFis.Size = new System.Drawing.Size(56, 20);
+            this.bodyFis.Size = new System.Drawing.Size(56, 21);
             this.bodyFis.TabIndex = 40;
             // 
             // bodyColor
             // 
-            this.bodyColor.Location = new System.Drawing.Point(283, 32);
+            this.bodyColor.Location = new System.Drawing.Point(283, 30);
             this.bodyColor.Name = "bodyColor";
-            this.bodyColor.Size = new System.Drawing.Size(56, 20);
+            this.bodyColor.Size = new System.Drawing.Size(56, 21);
             this.bodyColor.TabIndex = 39;
             // 
             // bodySkid
             // 
-            this.bodySkid.Location = new System.Drawing.Point(183, 32);
+            this.bodySkid.Location = new System.Drawing.Point(183, 30);
             this.bodySkid.Name = "bodySkid";
-            this.bodySkid.Size = new System.Drawing.Size(56, 20);
+            this.bodySkid.Size = new System.Drawing.Size(56, 21);
             this.bodySkid.TabIndex = 38;
             this.bodySkid.TextChanged += new System.EventHandler(this.bodySkid_TextChanged);
             // 
             // bodyType
             // 
-            this.bodyType.Location = new System.Drawing.Point(69, 32);
+            this.bodyType.Location = new System.Drawing.Point(69, 30);
             this.bodyType.Name = "bodyType";
-            this.bodyType.Size = new System.Drawing.Size(56, 20);
+            this.bodyType.Size = new System.Drawing.Size(56, 21);
             this.bodyType.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(342, 35);
+            this.label6.Location = new System.Drawing.Point(342, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(47, 12);
             this.label6.TabIndex = 36;
             this.label6.Text = "FIS编码";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(246, 35);
+            this.label3.Location = new System.Drawing.Point(246, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 35;
             this.label3.Text = "颜色";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(134, 35);
+            this.label4.Location = new System.Drawing.Point(134, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 34;
             this.label4.Text = "滑橇号";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 35);
+            this.label2.Location = new System.Drawing.Point(32, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 33;
             this.label2.Text = "车型";
             // 
@@ -206,9 +206,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.bodySkid);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.Location = new System.Drawing.Point(12, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(486, 72);
+            this.groupBox1.Size = new System.Drawing.Size(486, 66);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "颜色编组站一区来车信息";
@@ -223,75 +223,75 @@
             this.groupBox3.Controls.Add(this.tconeskid);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(548, 21);
+            this.groupBox3.Location = new System.Drawing.Point(548, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(486, 72);
+            this.groupBox3.Size = new System.Drawing.Size(486, 66);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "面漆一线来车信息";
             // 
             // tconebody
             // 
-            this.tconebody.Location = new System.Drawing.Point(69, 33);
+            this.tconebody.Location = new System.Drawing.Point(69, 30);
             this.tconebody.Name = "tconebody";
-            this.tconebody.Size = new System.Drawing.Size(56, 20);
+            this.tconebody.Size = new System.Drawing.Size(56, 21);
             this.tconebody.TabIndex = 45;
             // 
             // tconecolor
             // 
-            this.tconecolor.Location = new System.Drawing.Point(283, 33);
+            this.tconecolor.Location = new System.Drawing.Point(283, 30);
             this.tconecolor.Name = "tconecolor";
-            this.tconecolor.Size = new System.Drawing.Size(56, 20);
+            this.tconecolor.Size = new System.Drawing.Size(56, 21);
             this.tconecolor.TabIndex = 47;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 36);
+            this.label9.Location = new System.Drawing.Point(32, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.Size = new System.Drawing.Size(29, 12);
             this.label9.TabIndex = 41;
             this.label9.Text = "车型";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(342, 36);
+            this.label10.Location = new System.Drawing.Point(342, 33);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.Size = new System.Drawing.Size(47, 12);
             this.label10.TabIndex = 44;
             this.label10.Text = "FIS编码";
             // 
             // tconefis
             // 
-            this.tconefis.Location = new System.Drawing.Point(395, 33);
+            this.tconefis.Location = new System.Drawing.Point(395, 30);
             this.tconefis.Name = "tconefis";
-            this.tconefis.Size = new System.Drawing.Size(56, 20);
+            this.tconefis.Size = new System.Drawing.Size(56, 21);
             this.tconefis.TabIndex = 48;
             // 
             // tconeskid
             // 
-            this.tconeskid.Location = new System.Drawing.Point(183, 33);
+            this.tconeskid.Location = new System.Drawing.Point(183, 30);
             this.tconeskid.Name = "tconeskid";
-            this.tconeskid.Size = new System.Drawing.Size(56, 20);
+            this.tconeskid.Size = new System.Drawing.Size(56, 21);
             this.tconeskid.TabIndex = 46;
             this.tconeskid.TextChanged += new System.EventHandler(this.tconeskid_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(134, 36);
+            this.label11.Location = new System.Drawing.Point(134, 33);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 13);
+            this.label11.Size = new System.Drawing.Size(41, 12);
             this.label11.TabIndex = 42;
             this.label11.Text = "滑橇号";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(246, 36);
+            this.label12.Location = new System.Drawing.Point(246, 33);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 43;
             this.label12.Text = "颜色";
             // 
@@ -301,15 +301,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 450);
+            this.ClientSize = new System.Drawing.Size(1322, 415);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "面准来车信息服务";
+            this.Text = "\\";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);

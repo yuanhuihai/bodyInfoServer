@@ -16,7 +16,7 @@ using Oracle.ManagedDataAccess.Client;
 
 /*
  timer1定时1s钟，显示时间信息
- timer2定时20s，从PLC获取值
+ timer2定时20s，从PLC获取车型信息
      
      */
 namespace bodyInfoServer
@@ -32,6 +32,8 @@ namespace bodyInfoServer
         getPlcValues operatePLC = new getPlcValues();
 
         oracleDatabaseOperate operateDatabase = new oracleDatabaseOperate();
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -115,17 +117,17 @@ namespace bodyInfoServer
 
             #region 颜色编组站一区来车信息
             bodySkid.Text = operatePLC.getCharValue("10.228.141.94", 960, 340, 4);
-            bodyType.Text = operatePLC.getCharValue("10.228.141.94", 960, 118, 3);
+            bodyType.Text = operatePLC.getCharValue("10.228.141.94", 960, 150, 3);
             bodyColor.Text = operatePLC.getCharValue("10.228.141.94", 960, 132, 4);
-            bodyFis.Text = operatePLC.getCharValue("10.228.141.94", 960, 8, 8);
+            bodyFis.Text = operatePLC.getCharValue("10.228.141.94", 960, 110, 8);
             #endregion
 
 
 
             #region 面漆一线来车信息
-            tconebody.Text = operatePLC.getCharValue("10.228.141.158", 951, 18, 3);
-            tconecolor.Text = operatePLC.getCharValue("10.228.141.158", 951, 32, 4);
             tconeskid.Text = operatePLC.getCharValue("10.228.141.158", 951, 240, 4);
+            tconebody.Text = operatePLC.getCharValue("10.228.141.158", 951, 50, 3);
+            tconecolor.Text = operatePLC.getCharValue("10.228.141.158", 951, 32, 4);         
             tconefis.Text = operatePLC.getCharValue("10.228.141.158", 951, 10, 8);
             #endregion
 
@@ -155,8 +157,6 @@ namespace bodyInfoServer
           
         }
 
- 
-
         //面漆一线来车记录
         private void timer5_Tick(object sender, EventArgs e)
         {
@@ -177,17 +177,11 @@ namespace bodyInfoServer
             #endregion
         }
 
-
-
-
         //颜色编组站来车
         private void bodySkid_TextChanged(object sender, EventArgs e)
         {
             timer3.Start();
         }
-
-
-
 
         //面漆一线来车
 
@@ -195,14 +189,6 @@ namespace bodyInfoServer
         {
             timer5.Start();
         }
-
-
-
-
-
-
-
-
 
 
     }
